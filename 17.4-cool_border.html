@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.4</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .box-cool1,
+        .box-cool2 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 50%;
+            height: 20%;
+            color: white;
+        }
+        
+        .box-cool1:after {
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-top: 2px solid red;
+            border-left: 2px solid red;
+            top: 50px;
+            left: 0;
+        }
+        
+        .box-cool1:before {
+            position: absolute;
+            content: '';
+            border-top: 2px solid red;
+            border-right: 2px solid red;
+            width: 30px;
+            height: 30px;
+            top: 50px;
+            right: 0px;
+        }
+        
+        .box-cool2:after {
+            position: absolute;
+            content: '';
+            border-bottom: 2px solid red;
+            border-left: 2px solid red;
+            width: 30px;
+            height: 30px;
+            top: 50px;
+            left: 0px;
+        }
+        
+        .box-cool2:before {
+            position: absolute;
+            content: '';
+            border-bottom: 2px solid red;
+            border-right: 2px solid red;
+            width: 30px;
+            height: 30px;
+            top: 50px;
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box-cool1">
+        </div>
+        <p>COOL BORDER</p>
+
+        <div class="box-cool2">
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

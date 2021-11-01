@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.5</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        a {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        a:hover:after {
+            content: attr(data-tooltip);
+            width: 120px;
+            height: ;
+            background-color: rgb(209, 157, 14);
+            color: #333;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            font-size: 12px;
+            top: -22px;
+            left: -10px;
+            z-index: 10;
+        }
+        
+        a:hover:before {
+            content: '';
+            width: 10px;
+            background-color: rgb(209, 157, 14);
+            color: black;
+            padding: 5px 0;
+            transform: rotate(45deg);
+            /* Position the tooltip */
+            position: absolute;
+            font-size: 8px;
+            top: -10px;
+            left: 10px;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sed esse accusantium dolore culpa praesentium <a href=”#” data-tooltip="karam is my freind">Karam</a> commodi enim officiis tenetur!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur <a href=”#” data-tooltip="Offer is my teacher">offer</a> adipisicing elit. Accusamus vitae optio cumque perspiciatis ullam fuga repellat debitis non maiores natus!</p>
+    </div>
+</body>
+
+</html>
