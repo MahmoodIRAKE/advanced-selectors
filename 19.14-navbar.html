@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.4</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav {
+            position: relative;
+            margin: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+        }
+        
+        .nav:after {
+            position: absolute;
+            content: '';
+            height: 2px;
+            width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            left: 0;
+            top: 0;
+            transition: all 1s ease-in;
+        }
+        
+        .nav:hover:after {
+            width: 100%;
+        }
+        
+        .nav:before {
+            position: absolute;
+            content: '';
+            height: 2px;
+            width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            right: 0;
+            top: 25px;
+            transition: all 1s ease-in;
+        }
+        
+        .nav:hover:before {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">Home</div>
+        <div class="nav">About</div>
+        <div class="nav">Services</div>
+        <div class="nav">Portfolio</div>
+        <div class="nav">Contact</div>
+
+    </div>
+</body>
+
+</html>

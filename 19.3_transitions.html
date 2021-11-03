@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            margin-bottom: 5%;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .rotate {
+            position: relative;
+            height: 100px;
+            width: 150px;
+            border: 2px solid black;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .rotate:after {
+            position: absolute;
+            content: '';
+            height: 0px;
+            z-index: -1;
+            height: 150px;
+            width: 100px;
+            top: -160px;
+            left: 60px;
+            transform: rotate(30deg);
+            transition: all 3s;
+        }
+        
+        .rotate:hover:after {
+            visibility: visible;
+            left: 25px;
+            transform: rotate(90deg);
+            top: -25px;
+            animation-name: no_1;
+            animation-duration: 6s;
+        }
+        
+        @keyframes no_1 {
+            to {
+                filter: opacity(0.6);
+                background-color: yellow;
+            }
+        }
+        
+        .translate {
+            position: relative;
+            margin-left: 5%;
+            height: 100px;
+            width: 150px;
+            border: 2px solid black;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 5s ease-in;
+        }
+        
+        .translate:after {
+            position: absolute;
+            content: '';
+            height: 100px;
+            width: 0px;
+            left: 0;
+            background-color: black;
+            transition: all 3s ease-in;
+            z-index: -1;
+        }
+        
+        .translate:hover {
+            color: white;
+        }
+        
+        .translate:hover:after {
+            width: 150px;
+            color: white;
+        }
+        
+        .translateY {
+            position: relative;
+            margin-left: 5%;
+            height: 100px;
+            width: 150px;
+            border: 2px solid black;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .translateY:after {
+            position: absolute;
+            content: 'YEAH!';
+            height: 0px;
+            width: 150px;
+            top: 0;
+            overflow: hidden;
+            background-color: red;
+            transition: all 0.5s ease-in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .translateY:hover:after {
+            position: absolute;
+            content: 'YEAH!';
+            height: 100px;
+            width: 150px;
+        }
+        
+        .scale {
+            position: relative;
+            height: 100px;
+            width: 150px;
+            border: 2px solid black;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 2s ease-in;
+        }
+        
+        .scale:after {
+            position: absolute;
+            content: 'scale&Opacity';
+            height: 100px;
+            width: 150px;
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s ease-in;
+            filter: opacity(0);
+        }
+        
+        .scale:hover:after {
+            filter: opacity(1);
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="rotate"> ROTATE</div>
+        <div class="translate">
+            <h4> Translate</h4>
+        </div>
+        <div class="translateY">TranslateY</div>
+
+
+    </div>
+    <div class="scale">scale&Opacity</div>
+
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.5</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+        
+        .sp1,
+        .sp2,
+        .sp3,
+        .sp4 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid white;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 3px solid #333;
+            animation: circle_1 0.5s infinite step-end;
+        }
+        
+        @keyframes circle_1 {
+            0% {
+                border: 3px solid #333;
+                border-right: 3px solid rgb(23, 165, 190);
+            }
+            25% {
+                border: 3px solid #333;
+                border-bottom: 3px solid rgb(23, 165, 190);
+            }
+            50% {
+                border: 3px solid #333;
+                border-left: 3px solid rgb(23, 165, 190);
+            }
+            75% {
+                border: 3px solid #333;
+                border-top: 3px solid rgb(23, 165, 190);
+            }
+        }
+        
+        .circle2 {
+            width: 50px;
+            height: 50px;
+            border-color: black;
+            border-radius: 50px;
+            animation: circle_2 0.5s infinite step-end;
+        }
+        
+        @keyframes circle_2 {
+            0% {
+                border-right: 2px solid rgb(23, 165, 190);
+            }
+            25% {
+                border-color: black;
+                border-bottom: 2px solid rgb(23, 165, 190);
+            }
+            50% {
+                border-color: black;
+                border-left: 2px solid rgb(23, 165, 190);
+            }
+            75% {
+                border-color: black;
+                border-top: 2px solid rgb(23, 165, 190);
+            }
+        }
+        
+        .c_1 {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-color: black;
+            border-radius: 50px;
+            animation: circle_3 3s infinite step-end;
+            background-color: #333;
+        }
+        
+        .c_2 {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-color: black;
+            border-radius: 50px;
+            animation: circle_4 3s infinite step-end;
+            background-color: #333;
+        }
+        
+        .c_3 {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-color: black;
+            border-radius: 50px;
+            animation: circle_5 3s infinite step-end;
+            background-color: #333;
+        }
+        
+        @keyframes circle_3 {
+            25% {
+                background-color: rgb(23, 165, 190);
+            }
+            50% {
+                background-color: #333;
+            }
+        }
+        
+        @keyframes circle_4 {
+            50% {
+                background-color: rgb(23, 165, 190);
+            }
+            75% {
+                background-color: #333;
+            }
+        }
+        
+        @keyframes circle_5 {
+            75% {
+                background-color: rgb(23, 165, 190);
+            }
+            100% {
+                background-color: #333;
+            }
+        }
+        
+        .c_4 {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-color: black;
+            border-radius: 50px;
+            animation: circle_6 1s infinite step-end;
+            background-color: rgb(23, 165, 190);
+        }
+        
+        .c_5 {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-color: black;
+            border-radius: 50px;
+            animation: circle_7 1s infinite step-end;
+            background-color: rgb(23, 165, 190);
+        }
+        
+        .c_6 {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-color: black;
+            border-radius: 50px;
+            animation: circle_8 1s infinite step-end;
+            background-color: rgb(23, 165, 190);
+        }
+        
+        @keyframes circle_6 {
+            25% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes circle_7 {
+            50% {
+                transform: translateY(-10px);
+            }
+            75% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes circle_8 {
+            75% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sp1">
+            <div class="circle">
+
+            </div>
+        </div>
+        <div class="sp2">
+            <div class="circle2">
+
+            </div>
+        </div>
+        <div class="sp3">
+            <div class="c_1"></div>
+            <div class="c_2"></div>
+            <div class="c_3"></div>
+        </div>
+        <div class="sp4">
+            <div class="c_4"></div>
+            <div class="c_5"></div>
+            <div class="c_6"></div>
+        </div>
+    </div>
+</body>
+
+</html>
